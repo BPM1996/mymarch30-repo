@@ -4,7 +4,7 @@
   vars:
      myvar1: git
      myvar2: tree
-     myvar3: wgt
+     myvar3: wget
   tasks:
   - name: i want to display myvar1
     debug:
