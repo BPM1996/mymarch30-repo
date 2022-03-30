@@ -12,12 +12,12 @@
 
   - name: i want to install git
     apt:
-      name: "{{item}}"
+      name: "{{ item }}"
       state: present  
-      loop:
+    loop:
        - "{{myvar1}}"
        - "{{myvar2}}"
        - "{{myvar3}}"
-       
+
 
       
