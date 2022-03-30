@@ -7,7 +7,7 @@
        name: apache2
        state: present
      when: ansible_os_family =="Debian"
-     
+
    - name: i want to start webserver on ansible ubuntu nodes
      service:
        name: apache2
@@ -16,12 +16,12 @@
 
    - name: i want to install webserver on RedHat nodes
      yum:
-       name: apache2
+       name: httpd
        state: present
      when: ansible_os_family =="RedHat"
 
    - name: i want to start webserver on RedHat nodes
      service:
-       name: apache2
+       name: httpd
        state: started
      when: ansible_os_family =="RedHat"     
