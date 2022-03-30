@@ -13,4 +13,7 @@
        name: "{{myjavapackageforRedHat}}"
        state: present     
      when: ansible_os_family =="RedHat"
+     
+
+
 
