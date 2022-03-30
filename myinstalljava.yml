@@ -1,5 +1,5 @@
 ---
-- hosts: mywbserver
+- hosts: mywebserver
   become: yes
   tasks:
    - name: i want to install java on ansible ubuntu nodes
@@ -13,4 +13,4 @@
        name: java-1.8.0-openjdk
        state: present     
      when: ansible_os_family =="RedHat"
-       
+     
