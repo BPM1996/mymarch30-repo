@@ -5,6 +5,7 @@
     myvar1: git
     myvar2: tree
     myvar3: wget
+  tasks:  
 - name: i want to dispay myvar1
   debug:
     msg: "{{myvar1}}"
@@ -13,4 +14,5 @@
     name: "{{myvar1}}"
     state: present
     
+
 
