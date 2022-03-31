@@ -9,11 +9,13 @@
   - name: i want to dispay myvar1
     debug:
         msg: "{{myvar1}}"
+
 - name: i want to intall git
   apt:
     name: "{{myvar1}}"
     state: present
     
+
 
 
 
