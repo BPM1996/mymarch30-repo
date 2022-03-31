@@ -8,9 +8,8 @@
   tasks:
   - name: i want to display myvar1
     debug:
-      msg: "{{ item }}"  
+      msg: "{{myvar1}}"  
   - name:
     apt:
       name: "{{myvar1}}"    
       sate: present
-      
