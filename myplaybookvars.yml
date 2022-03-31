@@ -1,0 +1,15 @@
+---
+- hosts: 172.31.10.150
+  become: yes
+  vars:
+    myvar1: git
+    myvar2: tree
+    myvar3: wget
+- name: i want to dispay myvar2
+  debug:
+    msg: "{{myvar2}}"
+- name: i want to intall  myvar1
+  apt:
+    name: "{{myvar1}}"
+    state: present
+           
