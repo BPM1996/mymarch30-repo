@@ -12,4 +12,5 @@
   - name:
     apt:
       name: "{{myvar1}}"    
-      sate: present
+      state: present
+      
