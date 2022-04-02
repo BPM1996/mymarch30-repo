@@ -9,5 +9,5 @@
   - name: i want to display my1st tasks result
     debug:
        msg:"{{myResult}}"
-       
+
 
