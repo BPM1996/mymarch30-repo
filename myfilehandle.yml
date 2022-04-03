@@ -7,17 +7,38 @@
     apt: 
       name: apache2
       state: present
-      notify: restartwebserver
+      notify: restartwebserver 
+    when: ansible_os_family== "Debian"
 
   - name: i want to copy file into ansible nodes
     template:
         src: myindex.j2
         dest: /var/www/html/index.html
         notify: restartwebserver
-        
+    when: ansible_os_family== "Debian"
+
+  - name: i want to instaall web server on Redhat nodes
+    yum:
+      name: httpd
+      state: present
+      notify: startwebserver
+    when: ansible_os_family== "RedHat"
+
+  - name: i want to copy my index file into redhat nodes
+    template:
+         src: myindex.j2
+         dest: /var/www/html/index.html
+         notify: startwebserver
+    when: ansible_os_family== "RedHat"
+
   handlers:
    - name: restartwebserver
      service:
         name: apache2
         state: restarted
 
+   - name: startwebserver
+     service:
+        name: httpd
+        state: restarted
+      
