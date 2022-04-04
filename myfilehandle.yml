@@ -14,9 +14,8 @@
        src: myindex.j2
        dest: /var/www/html/index.html    
 
-  handler:
+  handlers:
    - name: restarted
      service:
         name: apache2
         state: restarted     
-        
