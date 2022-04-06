@@ -1,5 +1,7 @@
 ---
 # tasks file for mywebrole3
+
+
 - name: install webserver
   apt: 
     name: apache2
@@ -9,5 +11,5 @@
 - name:  copy index file into node 
   template:
       src: templates/index.j2
-      dest: var/www/html/index.html
+      dest: /var/www/html/index.html
   notify: restartedwebserver    
