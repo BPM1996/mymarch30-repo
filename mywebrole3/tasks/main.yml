@@ -4,10 +4,10 @@
   apt: 
     name: apache2
     state: present
-    notify: restartwebserver
+    notify: restartedwebserver
 
 - name:  copy index file into node 
   template:
       src: templates/index.j2
       dest: var/www/html/index.html
-  notify: restartwebserver    
+  notify: restartedwebserver    
