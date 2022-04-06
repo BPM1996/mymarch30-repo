@@ -5,12 +5,11 @@
   apt:
     name: apache2
     state: present
-    notify: restartwebserver
 
 - name: copy indexfile
   template:
      src: templates/myindex.j2
-     dest: /vars/www/html/index.html
+     dest: /var/www/html/index.html
      notify: restartwebserver
 
 
